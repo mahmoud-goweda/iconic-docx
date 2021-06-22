@@ -8,7 +8,8 @@ const express = require('express');
 const multerUpload = require('./multer-upload')
 
 app.post('/upload-file',multerUpload.single('file_doc'),function (req, res) {
-    res.send('req')
+  console.log(req.file);
+    res.json(req.file)
   })
 
 
