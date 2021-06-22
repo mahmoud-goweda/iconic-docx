@@ -18,7 +18,7 @@ app.post('/upload-file',multerUpload.single('file_doc'),function (req, res) {
 
   app.use('/uploads', express.static('uploaded-docx'));
 
-  app.listen(3000, function () {
+  app.listen( process.env.PORT || 3000, function () {
     console.log(`Express server listening on port ${3000}`)
   })
 
