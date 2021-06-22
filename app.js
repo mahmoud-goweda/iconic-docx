@@ -5,6 +5,8 @@ const express = require('express');
  const cors = require("cors");
   const fs = require('fs')
   const path = require('path');
+  app.use(cors())
+
 const multerUpload = require('./multer-upload')
 
 app.post('/upload-file',multerUpload.single('file_doc'),function (req, res) {
